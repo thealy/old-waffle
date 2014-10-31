@@ -2,34 +2,25 @@
 <html>
 
 <head>
-    <title></title>
     <meta charset="utf-8" />
-    <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
-    <script src="cordova.js"></script>
-    <script src="kendo/js/jquery.min.js"></script>
-    <script src="kendo/js/kendo.mobile.min.js"></script>
-    <script src="scripts/enableDesigner.js"></script>
 </head>
 
 <body>
-    <div data-id="Layout1" data-role="layout" data-platform="android">
-        <!--Header-->
-        <div data-role="header">
-            <div data-role="navbar">
-                <span data-role="view-title"></span>
-            </div>
-        </div>
-        <!--Footer-->
-        <div data-role="footer">
-            <div data-role="tabstrip">
-                <a href="Run.html" data-icon="home">Main</a>
-                <a href="AttendeeEdit.html" data-icon="contacts">Attendee Edit</a>
-                <a href="Event.html" data-icon="search">Event</a>
-                <a href="#tabstrip-weather" data-icon="globe">Weather</a>
+    <div id="AttendeeEdit" data-role="view" data-layout="tabstrip-layout" data-title="Attendee Edit">
+        Attendee Edit view
+        <div class="demo-section k-header" style="width: 300px;">
+            <div id="wrapper">
+                <label for=fader>Volume</label>
+                <input type=range min=0 max=100 value=50 id=fader step=1 onchange="outputUpdate(value)">
+                <output for=fader id=volume>50</output>
+                <script>
+                    function outputUpdate(vol) {
+                        document.querySelector('#volume').value = vol;
+                    }
+                </script>
             </div>
         </div>
     </div>
-    <div id="AttendeeEdit" data-role="view" data-title="Attendee Edit"></div>
 </body>
 
 </html>
