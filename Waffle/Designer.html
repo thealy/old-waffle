@@ -1,23 +1,39 @@
 <!DOCTYPE html>
 
 <html>
-<head>
-    <title></title>
-    <meta charset="utf-8" />
-    <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+    <head>
+        <title></title>
+        <meta charset="utf-8" />
+        <script type="text/javascript">
+            function updateTextInput(val) {
+                document.getElementById('textInput').value = val; 
+            }
+        </script>
 
-    <script src="cordova.js"></script>
-    <script src="kendo/js/jquery.min.js"></script>
-    <script src="kendo/js/kendo.mobile.min.js"></script>
-    <script src="scripts/enableDesigner.js"></script>
-    
-</head>
+    </head>
     <body>
-
+        <div>
+            Designer test page
+        </div>
         <div data-id="Layout1" data-role="layout">
         </div>
-        <div id="View1" data-role="view" data-title="Test View" 
-             data-use-native-scrolling="true" data-layout="Layout1" 
-             data-stretch="true"></div>
+        <div>
+            <input type="range" name="rangeInput" min="0" max="100" onchange="updateTextInput(this.value);">
+            <input type="text" id="textInput" value="">
+        </div>
+
+        <div id="View1" data-role="view">
+            <ul data-role="listview" data-style="inset">
+                <li>
+                    <label>Label</label>
+                </li>
+                <li>
+                    <label>Label</label>
+                </li>
+                <li>
+                    <label>Label</label>
+                </li>
+            </ul>
+        </div>
     </body>
 </html>

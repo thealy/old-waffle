@@ -1,0 +1,7 @@
+body { 
+    background: antiquewhite; margin: 4rem; font-family: Avenir, sans-serif; 
+}
+input#annual { width:90%; }
+input#hourly { width:90%; }
+output#salary1 { width:90%; }
+output#salary2 { width:90%; } 
